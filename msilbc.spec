@@ -5,13 +5,16 @@ Name:		msilbc
 Version:	2.0.1
 Release:	0.1
 License:	GPL v2
-Group:		Developement/Libraries
+Group:		Development/Libraries
 Source0:	http://mirror.lihnidos.org/GNU/savannah/linphone/plugins/sources/%{name}-%{version}.tar.gz
 # Source0-md5:	ec2855c57b4344f14fbbc8cfd4c433fe
 URL:		http://git.exherbo.org/summer/packages/media-plugins/msilbc
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libilbc-devel
+BuildRequires:	libtool
 BuildRequires:	mediastreamer-devel
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,6 +49,7 @@ Statyczna biblioteka ....
 %setup -q
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
