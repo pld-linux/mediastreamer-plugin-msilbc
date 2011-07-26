@@ -3,7 +3,7 @@ Summary:	msilbc
 Summary(pl.UTF-8):	msilbc
 Name:		msilbc
 Version:	2.0.1
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Development/Libraries
 Source0:	http://mirror.lihnidos.org/GNU/savannah/linphone/plugins/sources/%{name}-%{version}.tar.gz
