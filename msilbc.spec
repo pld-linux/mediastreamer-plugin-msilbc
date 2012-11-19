@@ -3,7 +3,7 @@ Summary:	msilbc
 Summary(pl.UTF-8):	msilbc
 Name:		msilbc
 Version:	2.0.1
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Development/Libraries
 Source0:	http://mirror.lihnidos.org/GNU/savannah/linphone/plugins/sources/%{name}-%{version}.tar.gz
@@ -12,7 +12,7 @@ URL:		http://git.exherbo.org/summer/packages/media-plugins/msilbc
 Patch0:		%{name}-plugindirfix.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libilbc-devel
+BuildRequires:	webrtc-libilbc-devel
 BuildRequires:	libtool
 BuildRequires:	mediastreamer-devel
 BuildRequires:	pkgconfig
