@@ -1,0 +1,27 @@
+diff -ur msilbc-2.0.3/configure.ac msilbc-2.0.3-webrtc/configure.ac
+--- msilbc-2.0.3/configure.ac	2011-02-07 15:26:04.000000000 +0100
++++ msilbc-2.0.3-webrtc/configure.ac	2012-11-19 11:50:19.000000000 +0100
+@@ -48,7 +48,7 @@
+ # check for libraries that have pkg-config files installed
+ PKG_CHECK_MODULES(ORTP, ortp >= 0.16.0)
+ PKG_CHECK_MODULES(MEDIASTREAMER, mediastreamer >= 2.0.0)
+-PKG_CHECK_MODULES(ILBC, ilbc >= 0.0.0)
++PKG_CHECK_MODULES(ILBC, libilbc >= 0.0.0)
+ 
+ # create the following files from their .in counterparts
+ AC_CONFIG_FILES([
+diff -ur msilbc-2.0.3/ilbc.c msilbc-2.0.3-webrtc/ilbc.c
+--- msilbc-2.0.3/ilbc.c	2011-02-07 15:26:04.000000000 +0100
++++ msilbc-2.0.3-webrtc/ilbc.c	2012-11-19 11:55:40.000000000 +0100
+@@ -5,8 +5,9 @@
+ 	#include <iLBC_encode.h>
+ 	#include <iLBC_decode.h>
+ #else
+-	#include <ilbc/iLBC_encode.h>
+-	#include <ilbc/iLBC_decode.h>
++	#include <ilbc.h>
++	#define NO_OF_BYTES_30MS   50
++	#define NO_OF_BYTES_20MS   38
+ #endif /*ANDROID*/
+ 
+ #include "mediastreamer2/msfilter.h"

@@ -1,15 +1,18 @@
 #
+# Conditional build:
+%bcond_without	static_libs	# don't build static libraries
+#
 Summary:	msilbc
 Summary(pl.UTF-8):	msilbc
 Name:		msilbc
-Version:	2.0.1
-Release:	3
+Version:	2.0.3
+Release:	1
 License:	GPL v2
 Group:		Development/Libraries
 Source0:	http://mirror.lihnidos.org/GNU/savannah/linphone/plugins/sources/%{name}-%{version}.tar.gz
-# Source0-md5:	ec2855c57b4344f14fbbc8cfd4c433fe
+# Source0-md5:	9c8740345dd8ee9732604a8f6a4329e6
+Patch0:		%{name}-webrtc-libilbc.patch
 URL:		http://git.exherbo.org/summer/packages/media-plugins/msilbc
-Patch0:		%{name}-plugindirfix.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	webrtc-libilbc-devel
@@ -48,14 +51,16 @@ Statyczna biblioteka msilbc.
 
 %prep
 %setup -q
-%patch0 -p0
+%patch0 -p1
 
 %build
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	%{?with_static_libs:--enable-static}
+
 %{__make}
 
 %install
