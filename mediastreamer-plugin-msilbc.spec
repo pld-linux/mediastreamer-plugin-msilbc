@@ -2,7 +2,7 @@ Summary:	iLBC audio codec for mediastreamer
 Summary(pl.UTF-8):	Kodek dźwięku iLBC dla mediastreamera
 Name:		mediastreamer-plugin-msilbc
 Version:	2.0.3
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Libraries
 Source0:	http://download-mirror.savannah.gnu.org/releases/linphone/plugins/sources/msilbc-%{version}.tar.gz
