@@ -11,12 +11,13 @@ Patch0:		msilbc-webrtc-libilbc.patch
 URL:		http://git.exherbo.org/summer/packages/media-plugins/msilbc
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake
-BuildRequires:	ortp-devel >= 0.16.0
-BuildRequires:	webrtc-libilbc-devel
 BuildRequires:	libtool >= 2:2
 BuildRequires:	mediastreamer-devel >= 2.0.0
+BuildRequires:	ortp-devel >= 0.16.0
 BuildRequires:	pkgconfig
+BuildRequires:	webrtc-libilbc-devel
 Requires:	mediastreamer >= 2.0.0
+Requires:	ortp >= 0.16.0
 Obsoletes:	msilbc
 Obsoletes:	msilbc-devel
 Obsoletes:	msilbc-static
@@ -36,8 +37,9 @@ niezbędną do używania tego kodeka w programie Linphone.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 
