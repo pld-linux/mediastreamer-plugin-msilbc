@@ -25,3 +25,15 @@ diff -ur msilbc-2.0.3/ilbc.c msilbc-2.0.3-webrtc/ilbc.c
  #endif /*ANDROID*/
  
  #include "mediastreamer2/msfilter.h"
+@@ -14,6 +14,11 @@
+ #include "mediastreamer2/mscodecutils.h"
+ #include "mediastreamer2/msticker.h"
+ 
++#define initDecode WebRtcIlbcfix_InitDecode
++#define initEncode WebRtcIlbcfix_InitEncode
++#define iLBC_decode WebRtcIlbcfix_DecodeImpl
++#define iLBC_encode WebRtcIlbcfix_EncodeImpl
++
+ #ifdef HAVE_ms_bufferizer_fill_current_metas
+ #define ms_bufferizer_fill_current_metas(b,m) ms_bufferizer_fill_current_metas(b,m)
+ #else
