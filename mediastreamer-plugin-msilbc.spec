@@ -5,7 +5,7 @@ Version:	2.1.2
 Release:	5
 License:	GPL v2
 Group:		Libraries
-Source0:	http://linphone.org/releases/sources/plugins/msilbc/msilbc-%{version}.tar.gz
+Source0:	http://linphone.org/releases/old/sources/plugins/msilbc/msilbc-%{version}.tar.gz
 # Source0-md5:	e9472ef8ade6b06bf9519f6638a8723f
 Patch0:		msilbc-webrtc-libilbc.patch
 URL:		http://git.exherbo.org/summer/packages/media-plugins/msilbc
