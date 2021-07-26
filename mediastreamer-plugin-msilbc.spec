@@ -18,9 +18,9 @@ BuildRequires:	pkgconfig
 BuildRequires:	webrtc-libilbc-devel
 Requires:	mediastreamer >= 2.0.0
 Requires:	ortp >= 0.16.0
-Obsoletes:	msilbc
-Obsoletes:	msilbc-devel
-Obsoletes:	msilbc-static
+Obsoletes:	msilbc < 2.0.3-3
+Obsoletes:	msilbc-devel < 2.0.3-3
+Obsoletes:	msilbc-static < 2.0.3-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
