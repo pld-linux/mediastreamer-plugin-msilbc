@@ -33,7 +33,7 @@ niezbędną do używania tego kodeka w programie Linphone.
 
 %prep
 %setup -q -n msilbc-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__libtoolize}
